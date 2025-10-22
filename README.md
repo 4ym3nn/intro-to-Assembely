@@ -204,3 +204,20 @@ More :
 | `cmov`      | Conditional move (fast branching alternative) |
 | `nop`       | Do nothing (used in alignment/optimization)   |
 
+Stack:
+![](memoryLayoutC.jpg)
+
+
+
+| Item                | Rule                                                                                                     |
+| ------------------- | -------------------------------------------------------------------------------------------------------- |
+| Argument Passing    | First 6 arguments in registers:<br>**RDI, RSI, RDX, RCX, R8, R9**<br>Extra arguments go on the **stack** |
+| Return Value        | **RAX**                                                                                                  |
+
+
+| Item                | Rule                                                                                    |
+| ------------------- | --------------------------------------------------------------------------------------- |
+| Argument Passing    | First 4 arguments in registers:<br>**RCX, RDX, R8, R9**<br>Extra arguments on **stack** |
+| Return Value        | **RAX**                                                                                 |
+
+now we are ready to understand binaries :
